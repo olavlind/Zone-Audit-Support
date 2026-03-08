@@ -3,229 +3,46 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zone Audit — Support</title>
+  <title>Zone Audit — Support &amp; Privacy Policy</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg: #0b1829;
-      --bg2: #0f2040;
       --blue: #4A9EFF;
       --gold: #FFB830;
       --white: #f0f4ff;
       --muted: #7a92b0;
       --border: rgba(74,158,255,0.15);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    /* Background glow */
-    body::before {
-      content: '';
-      position: fixed;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(74,158,255,0.08) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Header */
-    header {
-      padding: 60px 0 48px;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .app-icon {
-      width: 88px;
-      height: 88px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #1a2f4e, #0f1f35);
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-      overflow: hidden;
-    }
-
-    /* Lightning bolt SVG inline */
-    .app-icon svg {
-      width: 56px;
-      height: 56px;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .tagline {
-      color: var(--muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    /* Sections */
-    section {
-      padding: 48px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section:last-child {
-      border-bottom: none;
-      padding-bottom: 80px;
-    }
-
-    h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--blue);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    h2::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 18px;
-      background: var(--gold);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    p {
-      color: #a0b4cc;
-      line-height: 1.75;
-      font-size: 0.97rem;
-      margin-bottom: 16px;
-    }
-
+    body { background: var(--bg); color: var(--white); font-family: 'DM Sans', sans-serif; font-weight: 300; min-height: 100vh; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 60px 0 48px; text-align: center; border-bottom: 1px solid var(--border); }
+    .app-icon { width: 88px; height: 88px; border-radius: 20px; background: linear-gradient(135deg, #1a2f4e, #0f1f35); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
+    .app-icon svg { width: 56px; height: 56px; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: 2rem; font-weight: 400; color: var(--white); margin-bottom: 8px; }
+    .tagline { color: var(--muted); font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; padding-bottom: 80px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--blue); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+    h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: var(--gold); border-radius: 2px; flex-shrink: 0; }
+    p { color: #a0b4cc; line-height: 1.75; font-size: 0.97rem; margin-bottom: 16px; }
     p:last-child { margin-bottom: 0; }
-
-    /* FAQ */
-    .faq-item {
-      margin-bottom: 28px;
-      padding: 20px 24px;
-      background: rgba(74,158,255,0.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      transition: border-color 0.2s;
-    }
-
-    .faq-item:hover {
-      border-color: rgba(74,158,255,0.3);
-    }
-
+    .faq-item { margin-bottom: 28px; padding: 20px 24px; background: rgba(74,158,255,0.04); border: 1px solid var(--border); border-radius: 12px; }
     .faq-item:last-child { margin-bottom: 0; }
-
-    .faq-q {
-      font-weight: 500;
-      color: var(--white);
-      font-size: 0.97rem;
-      margin-bottom: 10px;
-    }
-
-    .faq-a {
-      color: #7a92b0;
-      font-size: 0.93rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    /* Contact */
-    .contact-card {
-      background: rgba(74,158,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      text-align: center;
-    }
-
-    .contact-card p {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .email-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--blue);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .email-link:hover {
-      background: #3a8ef0;
-      transform: translateY(-1px);
-    }
-
-    .response-note {
-      margin-top: 16px;
-      font-size: 0.82rem;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 0;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 32px 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
+    .faq-q { font-weight: 500; color: var(--white); font-size: 0.97rem; margin-bottom: 10px; }
+    .faq-a { color: #7a92b0; font-size: 0.93rem; line-height: 1.7; margin: 0; }
+    .contact-card { background: rgba(74,158,255,0.05); border: 1px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; }
+    .contact-card p { margin-bottom: 20px; }
+    .email-link { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 0.95rem; font-weight: 500; }
+    .response-note { margin-top: 16px; font-size: 0.82rem; color: var(--muted); margin-bottom: 0 !important; }
+    .privacy-item { margin-bottom: 20px; padding-left: 16px; border-left: 2px solid var(--gold); }
+    .privacy-item strong { display: block; color: var(--white); font-weight: 500; margin-bottom: 4px; }
+    footer { text-align: center; padding: 32px 0; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
-
 <div class="container">
-
   <header>
     <div class="app-icon">
       <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
@@ -255,40 +72,65 @@
           <line x1="205" y1="330" x2="242" y2="351"/>
           <line x1="342" y1="193" x2="363" y2="230"/>
         </g>
-        <polygon points="560,220 420,530 500,530 464,800 610,470 524,470" fill="url(#bolt)" filter="drop-shadow(0 0 18px rgba(255,180,0,0.6))"/>
+        <polygon points="560,220 420,530 500,530 464,800 610,470 524,470" fill="url(#bolt)"/>
       </svg>
     </div>
     <h1>Zone Audit</h1>
-    <p class="tagline">Time &amp; Energy Audit — Support</p>
+    <p class="tagline">Time &amp; Energy Audit — Support &amp; Privacy</p>
   </header>
 
   <section>
     <h2>About the App</h2>
-    <p>Zone Audit helps you map every task in your work life across two dimensions: how much energy it gives you, and how much value it creates. Based on the time and energy frameworks taught by leading business coaches, it helps you identify your Zone of Genius — and protect it.</p>
+    <p>Zone Audit helps you map every task in your work life across two dimensions: how much energy it gives you, and how much value it creates. Based on time and energy frameworks taught by leading business coaches, it helps you identify your Zone of Genius — and protect it.</p>
     <p>Stop grinding on tasks that drain you. Start spending your best hours on your best work.</p>
   </section>
 
   <section>
     <h2>Frequently Asked Questions</h2>
-
     <div class="faq-item">
       <p class="faq-q">What is the HB-HV / LB-LV framework?</p>
       <p class="faq-a">Tasks are mapped across two axes: Energy Boost (HB = High Boost, LB = Low Boost) and Value (HV = High Value, LV = Low Value). Your goal is to maximize time in the HB-HV quadrant — tasks that energize you and move the needle. Tasks in the LB-LV quadrant should be dropped if possible.</p>
     </div>
-
     <div class="faq-item">
-      <p class="faq-q">Why are two quadrants called "traps"?</p>
-      <p class="faq-a">HB-LV tasks feel productive because they energize you — but they create little real value. LB-HV tasks feel necessary because they're important — but they slowly drain you. Spending too much time in either leads to burnout or stagnation.</p>
+      <p class="faq-q">Why are two quadrants called traps?</p>
+      <p class="faq-a">HB-LV tasks feel productive because they energize you — but they create little real value. LB-HV tasks feel necessary because they are important — but they slowly drain you. Spending too much time in either leads to burnout or stagnation.</p>
     </div>
-
     <div class="faq-item">
       <p class="faq-q">Is my data stored anywhere?</p>
       <p class="faq-a">All your data is stored locally on your device. Zone Audit does not collect, transmit, or store any personal data on external servers.</p>
     </div>
-
     <div class="faq-item">
       <p class="faq-q">I found a bug or have a feature request.</p>
       <p class="faq-a">Please reach out via the contact email below. All feedback is read and genuinely considered — your input directly shapes the product.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy Policy</h2>
+    <p>Last updated: March 2026</p>
+    <div class="privacy-item">
+      <strong>No data collection</strong>
+      Zone Audit does not collect, store, or transmit any personal data. All information you enter into the app stays on your device.
+    </div>
+    <div class="privacy-item">
+      <strong>No analytics</strong>
+      Zone Audit does not use any third-party analytics, tracking, or advertising SDKs.
+    </div>
+    <div class="privacy-item">
+      <strong>No account required</strong>
+      Zone Audit does not require you to create an account or provide any personal information to use the app.
+    </div>
+    <div class="privacy-item">
+      <strong>Local storage only</strong>
+      All data you create in Zone Audit is stored locally on your device using standard iOS storage. Deleting the app removes all associated data.
+    </div>
+    <div class="privacy-item">
+      <strong>No third-party sharing</strong>
+      We do not share any data with third parties because we do not collect any data in the first place.
+    </div>
+    <div class="privacy-item">
+      <strong>Contact</strong>
+      Questions about this privacy policy? Contact us at zoneaudit.support@gmail.com
     </div>
   </section>
 
@@ -297,7 +139,15 @@
     <div class="contact-card">
       <p>Have a question, found a bug, or want to share feedback? Get in touch directly.</p>
       <a href="mailto:zoneaudit.support@gmail.com" class="email-link">
-        ✉ zoneaudit.support@gmail.com
+        &#9993; zoneaudit.support@gmail.com
       </a>
       <p class="response-note">Typical response time: 1–2 business days</p>
     </div>
+  </section>
+
+  <footer>
+    <p>&#169; 2026 Zone Audit &nbsp;&middot;&nbsp; All rights reserved</p>
+  </footer>
+</div>
+</body>
+</html>
